@@ -5,6 +5,10 @@ var app = express();
 
 var PORT = process.env.PORT || 8080;
 
+var MONGODB_URI = precess.env.MONGODB_URI || "mongodb //localhost/mongoHeadlines";
+
+mongoose.connect(MONGODB_URI);
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
